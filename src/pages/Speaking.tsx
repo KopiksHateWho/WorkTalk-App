@@ -32,7 +32,7 @@ export default function Speaking() {
   return (
     <div className="flex flex-col gap-8">
       <PageHeader
-        title="Speaking Practice"
+        title="Speaking practice"
         subtitle="Talk with the coach about real career situations. Every answer earns XP, and every mistake becomes a correction you can reuse."
       >
         <div className="flex flex-wrap items-center gap-2">
@@ -82,7 +82,7 @@ export default function Speaking() {
               className={cn(
                 "min-h-11 flex-1 rounded-full px-4 text-sm font-semibold transition-colors sm:flex-none",
                 level === option
-                  ? "bg-gradient-to-r from-indigo-600 to-blue-500 text-white shadow-sm"
+                  ? "bg-brand text-white shadow-sm"
                   : "text-slate-600 hover:bg-white/70",
               )}
             >
@@ -121,7 +121,7 @@ export default function Speaking() {
       <section className="flex flex-col gap-3">
         <SectionTitle
           eyebrow="Career topics"
-          title="Choose a topic to practise"
+          title="Choose a topic to practice"
           description="Each conversation takes about five minutes and ends with feedback you can act on."
         />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

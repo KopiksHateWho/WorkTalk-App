@@ -140,7 +140,7 @@ export default function QuickQuiz() {
     return (
       <div className="flex flex-col gap-8">
         <PageHeader
-          title="Quick Quiz ⚡"
+          title="Quick quiz ⚡"
           subtitle="Real English in real situations: reply to your manager, handle a customer, finish a sentence. Choose the best answer and learn why it works."
         >
           <Chip>+20 XP per correct</Chip>
@@ -229,7 +229,7 @@ export default function QuickQuiz() {
           type="button"
           size="lg"
           onClick={startRound}
-          className="w-full gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white sm:w-fit sm:px-10"
+          className="w-full gap-2 rounded-full bg-brand text-white sm:w-fit sm:px-10"
         >
           Start quiz
           <ArrowRight className="size-4" aria-hidden="true" />
@@ -342,7 +342,7 @@ export default function QuickQuiz() {
               type="button"
               onClick={handleNext}
               disabled={saving}
-              className="w-full gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white sm:w-fit sm:px-8"
+              className="w-full gap-2 rounded-full bg-brand text-white sm:w-fit sm:px-8"
             >
               {saving ? (
                 <Loader2 className="size-4 animate-spin" aria-hidden="true" />

@@ -132,11 +132,11 @@ function Auth({ redirectAfterAuth, mode = "login" }: AuthProps = {}) {
           <Link to="/" className="w-fit">
             <Wordmark />
           </Link>
-          <h1 className="text-4xl font-extrabold tracking-tight text-slate-900">
-            Welcome to <span className="text-gradient-cool">VERITASS</span>
+          <h1 className="text-4xl text-slate-900">
+            Welcome to <span className="text-gradient-cool">Veritass</span>
           </h1>
           <p className="max-w-md text-base leading-7 text-slate-600">
-            Practise real workplace English out loud. The coach listens, corrects
+            Practice real workplace English out loud. The coach listens, corrects
             your sentence naturally, and you try again — every answer earns XP.
           </p>
           <GlassCard className="flex flex-col gap-3 p-5">
@@ -172,7 +172,7 @@ function Auth({ redirectAfterAuth, mode = "login" }: AuthProps = {}) {
             {step === "email" ? (
               <>
                 <header className="mb-5 text-center">
-                  <h2 className="text-2xl font-extrabold text-slate-900">
+                  <h2 className="text-2xl text-slate-900">
                     {isSignup ? "Create your account" : "Welcome back"}
                   </h2>
                   <p className="mt-1 text-sm text-slate-600">
@@ -215,14 +215,14 @@ function Auth({ redirectAfterAuth, mode = "login" }: AuthProps = {}) {
                   <Button
                     type="submit"
                     disabled={isLoading}
-                    className="h-11 gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white"
+                    className="h-11 gap-2 rounded-full bg-brand text-white"
                   >
                     {isLoading ? (
                       <Loader2 className="size-4 animate-spin" aria-hidden="true" />
                     ) : (
                       <Sparkles className="size-4" aria-hidden="true" />
                     )}
-                    {isSignup ? "Create account" : "Log in"}
+                    {isSignup ? "Sign up" : "Log in"}
                   </Button>
                 </form>
 
@@ -270,19 +270,19 @@ function Auth({ redirectAfterAuth, mode = "login" }: AuthProps = {}) {
                 )}
 
                 <p className="mt-5 text-center text-sm text-slate-600">
-                  {isSignup ? "Already have an account? " : "New to VERITASS? "}
+                  {isSignup ? "Already have an account? " : "New to Veritass? "}
                   <Link
                     to={isSignup ? "/login" : "/signup"}
                     className="font-semibold text-indigo-700 underline-offset-4 hover:underline"
                   >
-                    {isSignup ? "Log in" : "Create an account"}
+                    {isSignup ? "Log in" : "Sign up"}
                   </Link>
                 </p>
               </>
             ) : (
               <>
                 <header className="mb-5 text-center">
-                  <h2 className="text-2xl font-extrabold text-slate-900">
+                  <h2 className="text-2xl text-slate-900">
                     Check your email
                   </h2>
                   <p className="mt-1 text-sm text-slate-600">
@@ -321,7 +321,7 @@ function Auth({ redirectAfterAuth, mode = "login" }: AuthProps = {}) {
                   <Button
                     type="submit"
                     disabled={isLoading || otp.length !== 6}
-                    className="h-11 gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white"
+                    className="h-11 gap-2 rounded-full bg-brand text-white"
                   >
                     {isLoading ? (
                       <Loader2 className="size-4 animate-spin" aria-hidden="true" />

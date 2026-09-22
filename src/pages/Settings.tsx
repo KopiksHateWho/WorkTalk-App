@@ -21,7 +21,7 @@ const GOALS = [
   { id: "vocabulary", label: "Vocabulary", emoji: "📚" },
   { id: "speaking", label: "Speaking", emoji: "🎙️" },
   { id: "workplace", label: "Workplace English", emoji: "💼" },
-  { id: "interview", label: "Job Interview", emoji: "🧑‍💼" },
+  { id: "interview", label: "Job interview", emoji: "🧑‍💼" },
 ];
 
 export default function Settings() {
@@ -104,7 +104,7 @@ export default function Settings() {
     <div className="flex flex-col gap-8">
       <PageHeader
         title="Settings"
-        subtitle="Adjust how VERITASS coaches you. Changes apply to your next conversation."
+        subtitle="Adjust how Veritass coaches you. Changes apply to your next conversation."
       />
 
       <section className="flex flex-col gap-3">
@@ -181,7 +181,7 @@ export default function Settings() {
             type="button"
             onClick={() => void handleSave()}
             disabled={saving}
-            className="w-full gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white sm:w-fit sm:px-8"
+            className="w-full gap-2 rounded-full bg-brand text-white sm:w-fit sm:px-8"
           >
             {saving ? (
               <Loader2 className="size-4 animate-spin" aria-hidden="true" />
@@ -236,7 +236,7 @@ export default function Settings() {
             </div>
             <p className="text-sm leading-6 text-slate-600">
               {micSupported
-                ? "Your browser supports speech recognition. VERITASS only listens while the microphone button shows “Recording”, and audio is never stored."
+                ? "Your browser supports speech recognition. Veritass only listens while the microphone button shows “Recording”, and audio is never stored."
                 : "Speech recognition isn't available in this browser, so you can type your answers. Everything else — corrections, feedback and XP — stays the same."}
             </p>
           </GlassCard>
@@ -257,7 +257,7 @@ export default function Settings() {
             {me.isGuest ? (
               <Button
                 asChild
-                className="gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white"
+                className="gap-2 rounded-full bg-brand text-white"
               >
                 <Link to="/signup">
                   <UserPlus className="size-4" aria-hidden="true" />

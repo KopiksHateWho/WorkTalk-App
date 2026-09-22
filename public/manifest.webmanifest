@@ -1,11 +1,11 @@
 {
-  "name": "VERITASS — English Career Quest",
-  "short_name": "VERITASS",
-  "description": "Gamified English career practice: vocabulary, quick challenges and AI speaking sessions.",
+  "name": "Veritass — English Career Quest",
+  "short_name": "Veritass",
+  "description": "Challenge-based career English: vocabulary rounds, quick workplace quizzes and speaking practice with feedback on every answer.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f4f7fe",
-  "theme_color": "#f4f7fe",
+  "background_color": "#f6f7fb",
+  "theme_color": "#f6f7fb",
   "icons": [
     {
       "src": "/logo.png",

@@ -27,17 +27,17 @@ export function Wordmark({ compact = false }: { compact?: boolean }) {
   return (
     <span className="flex items-center gap-2.5">
       <span
-        className="grid size-9 place-items-center rounded-2xl bg-gradient-to-br from-indigo-600 via-blue-500 to-cyan-400 text-white shadow-sm"
+        className="bg-brand-mark grid size-9 place-items-center rounded-2xl text-white shadow-sm"
         aria-hidden="true"
       >
         <GraduationCap className="size-5" />
       </span>
       <span className="leading-tight">
-        <span className="block text-sm font-extrabold tracking-[0.2em] text-slate-900">
-          VERITASS
+        <span className="font-display block text-lg font-semibold text-slate-900">
+          Veritass
         </span>
         {!compact ? (
-          <span className="block text-[10px] font-semibold tracking-[0.14em] text-slate-500 uppercase">
+          <span className="block text-[10px] font-semibold tracking-[0.16em] text-slate-500 uppercase">
             English Career Quest
           </span>
         ) : null}
@@ -109,7 +109,7 @@ export function Navbar() {
                 aria-label="Open profile menu"
                 className="size-10 rounded-2xl border border-white/70 bg-white/70 hover:bg-white"
               >
-                <span className="grid size-7 place-items-center rounded-full bg-gradient-to-br from-indigo-500 to-cyan-400 text-[11px] font-bold text-white">
+                <span className="bg-brand-mark grid size-7 place-items-center rounded-full text-[11px] font-bold text-white">
                   {initials || "V"}
                 </span>
               </Button>

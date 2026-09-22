@@ -60,13 +60,13 @@ export default function Profile() {
       <GlassCard tone="strong" className="flex flex-col gap-5 p-6">
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-center">
           <span
-            className="grid size-20 shrink-0 place-items-center rounded-3xl bg-gradient-to-br from-indigo-600 via-blue-500 to-cyan-400 text-2xl font-extrabold text-white shadow-lg"
+            className="grid size-20 shrink-0 place-items-center rounded-3xl bg-brand-mark text-2xl font-extrabold text-white shadow-lg"
             aria-hidden="true"
           >
             {initialsOf(displayName)}
           </span>
           <div className="min-w-0 text-center sm:text-left">
-            <h2 className="text-2xl font-extrabold text-slate-900">
+            <h2 className="text-2xl text-slate-900">
               {displayName}
             </h2>
             <p className="text-sm text-slate-600">
@@ -138,7 +138,7 @@ export default function Profile() {
           </div>
           <Button
             asChild
-            className="w-fit gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white"
+            className="w-fit gap-2 rounded-full bg-brand text-white"
           >
             <Link to="/signup">
               <UserPlus className="size-4" aria-hidden="true" />
@@ -152,7 +152,7 @@ export default function Profile() {
         <SectionTitle
           eyebrow="Achievements"
           title="Your badges"
-          description="Achievements unlock automatically as you practise."
+          description="Achievements unlock automatically as you practice."
         />
         <div className="grid gap-3 sm:grid-cols-2">
           {achievements.map((achievement) => (

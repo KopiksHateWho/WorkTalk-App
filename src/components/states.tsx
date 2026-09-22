@@ -62,7 +62,7 @@ export function ErrorState({
           <Button
             type="button"
             onClick={onAction}
-            className="gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white shadow-sm hover:opacity-95"
+            className="gap-2 rounded-full bg-brand text-white shadow-sm hover:opacity-95"
           >
             <RefreshCw className="size-4" aria-hidden="true" />
             {actionLabel}
@@ -87,7 +87,7 @@ export function SpeechUnsupportedState({
       className={className}
       icon={<Mic className="size-6" aria-hidden="true" />}
       title="Speech recognition isn't supported in this browser"
-      message="You can still practise: type your answer and the coach will respond and correct it just the same."
+      message="You can still practice: type your answer and the coach will respond and correct it just the same."
       actionLabel="Type my answer instead"
       onAction={onType}
     />
@@ -122,7 +122,7 @@ export function EmptyState({
         <Button
           type="button"
           onClick={onAction}
-          className="mt-1 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white"
+          className="mt-1 rounded-full bg-brand text-white"
         >
           {actionLabel}
         </Button>

@@ -39,7 +39,7 @@ const GOALS = [
   { id: "vocabulary", label: "Vocabulary", emoji: "📚" },
   { id: "speaking", label: "Speaking", emoji: "🎙️" },
   { id: "workplace", label: "Workplace English", emoji: "💼" },
-  { id: "interview", label: "Job Interview", emoji: "🧑‍💼" },
+  { id: "interview", label: "Job interview", emoji: "🧑‍💼" },
 ];
 
 export default function Onboarding() {
@@ -111,7 +111,7 @@ export default function Onboarding() {
               {step === 0 ? (
                 <>
                   <header className="flex flex-col gap-1">
-                    <h1 className="text-2xl font-extrabold text-slate-900 sm:text-3xl">
+                    <h1 className="text-2xl text-slate-900 sm:text-3xl">
                       What's your English level?
                     </h1>
                     <p className="text-sm leading-6 text-slate-600">
@@ -179,7 +179,7 @@ export default function Onboarding() {
               {step === 1 ? (
                 <>
                   <header className="flex flex-col gap-1">
-                    <h2 className="text-2xl font-extrabold text-slate-900 sm:text-3xl">
+                    <h2 className="text-2xl text-slate-900 sm:text-3xl">
                       What do you want to improve?
                     </h2>
                     <p className="text-sm leading-6 text-slate-600">
@@ -230,17 +230,17 @@ export default function Onboarding() {
               {step === 2 ? (
                 <div className="flex flex-col items-center gap-4 py-2 text-center">
                   <span
-                    className="grid size-16 place-items-center rounded-3xl bg-gradient-to-br from-indigo-500 to-cyan-400 text-white shadow-lg"
+                    className="grid size-16 place-items-center rounded-3xl bg-brand-mark text-white shadow-lg"
                     aria-hidden="true"
                   >
                     <PartyPopper className="size-8" />
                   </span>
-                  <h2 className="text-2xl font-extrabold text-slate-900 sm:text-3xl">
+                  <h2 className="text-2xl text-slate-900 sm:text-3xl">
                     You're ready!
                   </h2>
                   <p className="max-w-md text-sm leading-6 text-slate-600">
                     Let's start your English journey. Your first mission: speak
-                    for 30 seconds with the AI coach and earn 100 XP.
+                    for 30 seconds with the coach and earn 100 XP.
                   </p>
                   <div className="flex flex-wrap justify-center gap-2">
                     <span className="glass-chip rounded-full px-3 py-1 text-xs font-semibold text-slate-700">
@@ -277,7 +277,7 @@ export default function Onboarding() {
                 type="button"
                 onClick={() => setStep((value) => value + 1)}
                 disabled={step === 0 && !level}
-                className="gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 px-6 text-white"
+                className="gap-2 rounded-full bg-brand px-6 text-white"
               >
                 Continue
                 <ArrowRight className="size-4" aria-hidden="true" />
@@ -287,7 +287,7 @@ export default function Onboarding() {
                 type="button"
                 onClick={handleStart}
                 disabled={saving || !level}
-                className="gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 px-6 text-white"
+                className="gap-2 rounded-full bg-brand px-6 text-white"
               >
                 {saving ? (
                   <Loader2 className="size-4 animate-spin" aria-hidden="true" />

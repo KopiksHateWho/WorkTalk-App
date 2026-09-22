@@ -77,7 +77,7 @@ export function LevelBadge({
         className,
       )}
     >
-      <span className="grid size-6 place-items-center rounded-full bg-gradient-to-br from-indigo-500 to-cyan-400 text-[10px] font-bold text-white">
+      <span className="grid size-6 place-items-center rounded-full bg-brand-mark text-[10px] font-bold text-white">
         {level}
       </span>
       <span>LEVEL {level}</span>

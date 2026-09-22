@@ -35,7 +35,7 @@ const STEPS = [
   {
     number: "03",
     title: "Practice out loud",
-    description: "Speak your answer and see it transcribed instantly in the chat.",
+    description: "Speak your answer and watch it appear in the conversation instantly.",
   },
   {
     number: "04",
@@ -53,12 +53,12 @@ const PRACTICE_TYPES = [
   {
     emoji: "🎮",
     title: "Vocabulary",
-    description: "Guess meanings of workplace words and read a real example sentence.",
+    description: "Guess the meaning of workplace words and read a real example sentence.",
     to: "/games/vocabulary",
   },
   {
     emoji: "⚡",
-    title: "Quick Quiz",
+    title: "Quick quiz",
     description: "Short workplace situations: choose the best response and learn why.",
     to: "/games/quiz",
   },
@@ -72,7 +72,7 @@ const PRACTICE_TYPES = [
   {
     emoji: "💼",
     title: "Career English",
-    description: "Eight career topics from self introduction to professional emails.",
+    description: "Eight career topics, from self introduction to professional emails.",
     to: "/learn",
   },
 ];
@@ -96,7 +96,7 @@ export default function Landing() {
   const { isAuthenticated } = useAuth();
 
   const primaryTo = isAuthenticated ? "/home" : "/signup";
-  const primaryLabel = isAuthenticated ? "Go to dashboard" : "Get started";
+  const primaryLabel = isAuthenticated ? "Go to dashboard" : "Get started free";
 
   return (
     <div className="relative min-h-dvh overflow-x-hidden">
@@ -120,7 +120,7 @@ export default function Landing() {
               href="#practice"
               className="rounded-full px-3.5 py-2 text-sm font-semibold text-slate-600 hover:bg-white/60 hover:text-slate-900"
             >
-              What you can practise
+              What you can practice
             </a>
             <a
               href="#why"
@@ -131,10 +131,7 @@ export default function Landing() {
           </div>
           <div className="flex items-center gap-2">
             {isAuthenticated ? (
-              <Button
-                asChild
-                className="rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white"
-              >
+              <Button asChild className="bg-brand rounded-full text-white">
                 <Link to="/home">Dashboard</Link>
               </Button>
             ) : (
@@ -146,11 +143,8 @@ export default function Landing() {
                 >
                   <Link to="/login">Log in</Link>
                 </Button>
-                <Button
-                  asChild
-                  className="rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white"
-                >
-                  <Link to="/signup">Get started</Link>
+                <Button asChild className="bg-brand rounded-full text-white">
+                  <Link to="/signup">Sign up</Link>
                 </Button>
               </>
             )}
@@ -168,15 +162,15 @@ export default function Landing() {
             className="flex flex-col gap-6"
           >
             <Chip className="w-fit">
-              <Mic className="size-3.5 text-indigo-500" aria-hidden="true" />
-              Speaking first · built for university students
+              <Mic className="size-3.5 text-indigo-600" aria-hidden="true" />
+              Speaking first · built for contests and careers
             </Chip>
 
             <div>
-              <p className="text-sm font-extrabold tracking-[0.32em] text-slate-500 uppercase">
-                VERITASS
+              <p className="text-sm font-bold tracking-[0.3em] text-slate-500 uppercase">
+                Veritass
               </p>
-              <h1 className="mt-3 text-4xl leading-[1.05] font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+              <h1 className="mt-3 text-4xl leading-[1.06] text-slate-900 sm:text-5xl lg:text-6xl">
                 English Speaking
                 <br />
                 Practice for
@@ -186,16 +180,17 @@ export default function Landing() {
             </div>
 
             <p className="max-w-xl text-base leading-7 text-slate-600 sm:text-lg">
-              Learn English through games, quick challenges, and real workplace
-              conversations. You speak, the AI coach listens, corrects your
-              sentence, and you try again — until it sounds natural.
+              Learn something new every day — then say it out loud. Veritass turns
+              real workplace English into a friendly challenge: you speak, the
+              coach listens, your sentence comes back more natural, and you try
+              again until it sounds like you.
             </p>
 
             <div className="flex flex-col gap-3 sm:flex-row">
               <Button
                 asChild
                 size="lg"
-                className="gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 px-8 text-white shadow-lg shadow-indigo-500/20"
+                className="bg-brand gap-2 rounded-full px-8 text-white shadow-sm"
               >
                 <Link to={primaryTo}>
                   {primaryLabel}
@@ -215,21 +210,21 @@ export default function Landing() {
             <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-600">
               <span className="inline-flex items-center gap-1.5">
                 <CheckCircle2
-                  className="size-4 text-emerald-500"
+                  className="size-4 text-emerald-600"
                   aria-hidden="true"
                 />
                 No password needed
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <CheckCircle2
-                  className="size-4 text-emerald-500"
+                  className="size-4 text-emerald-600"
                   aria-hidden="true"
                 />
                 Guest mode included
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <CheckCircle2
-                  className="size-4 text-emerald-500"
+                  className="size-4 text-emerald-600"
                   aria-hidden="true"
                 />
                 Works on your phone
@@ -251,7 +246,7 @@ export default function Landing() {
               <div className="flex items-center justify-between gap-3">
                 <div className="flex items-center gap-2">
                   <span
-                    className="grid size-9 place-items-center rounded-2xl bg-gradient-to-br from-indigo-600 to-cyan-400 text-white"
+                    className="bg-brand-mark grid size-9 place-items-center rounded-2xl text-white"
                     aria-hidden="true"
                   >
                     <Sparkles className="size-4" />
@@ -284,12 +279,12 @@ export default function Landing() {
                     <span
                       className={
                         line.role === "ai"
-                          ? "grid size-8 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-indigo-500 to-cyan-400 text-[11px] font-bold text-white"
-                          : "grid size-8 shrink-0 place-items-center rounded-2xl bg-white/80 text-[11px] font-bold text-slate-600"
+                          ? "bg-brand-mark grid size-8 shrink-0 place-items-center rounded-2xl text-[10px] font-bold text-white"
+                          : "grid size-8 shrink-0 place-items-center rounded-2xl bg-white/80 text-[10px] font-bold text-slate-600"
                       }
                       aria-hidden="true"
                     >
-                      {line.role === "ai" ? "AI" : "YOU"}
+                      {line.role === "ai" ? "COACH" : "YOU"}
                     </span>
                     <p
                       className={
@@ -308,7 +303,7 @@ export default function Landing() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1.9 }}
-                className="rounded-3xl border border-emerald-500/25 bg-emerald-500/12 p-4"
+                className="rounded-3xl border border-emerald-600/20 bg-emerald-500/10 p-4"
               >
                 <p className="text-[11px] font-bold tracking-[0.12em] text-emerald-700 uppercase">
                   Coaching moment
@@ -336,7 +331,7 @@ export default function Landing() {
                   Recording 0:08 / 0:20
                 </div>
                 <span
-                  className="grid size-11 place-items-center rounded-full bg-gradient-to-br from-indigo-600 to-blue-500 text-white"
+                  className="bg-brand-mark grid size-11 place-items-center rounded-full text-white"
                   aria-hidden="true"
                 >
                   <Mic className="size-5" />
@@ -368,10 +363,10 @@ export default function Landing() {
         {/* How it works */}
         <section id="how-it-works" className="scroll-mt-24 py-16">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-xs font-bold tracking-[0.18em] text-indigo-600 uppercase">
+            <p className="text-xs font-bold tracking-[0.18em] text-indigo-700 uppercase">
               How it works
             </p>
-            <h2 className="mt-3 text-3xl font-extrabold text-slate-900 sm:text-4xl">
+            <h2 className="mt-3 text-3xl text-slate-900 sm:text-4xl">
               Five steps from “hello” to hired
             </h2>
             <p className="mt-3 text-base leading-7 text-slate-600">
@@ -389,7 +384,7 @@ export default function Landing() {
                 transition={{ duration: 0.35, delay: index * 0.06 }}
               >
                 <GlassCard interactive className="flex h-full flex-col gap-2 p-5">
-                  <span className="text-sm font-extrabold text-indigo-600">
+                  <span className="text-sm font-bold text-indigo-700">
                     {step.number}
                   </span>
                   <h3 className="text-base font-bold text-slate-900">
@@ -407,10 +402,10 @@ export default function Landing() {
         {/* Practice types */}
         <section id="practice" className="scroll-mt-24 py-16">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-xs font-bold tracking-[0.18em] text-indigo-600 uppercase">
-              What can you practise?
+            <p className="text-xs font-bold tracking-[0.18em] text-indigo-700 uppercase">
+              What can you practice?
             </p>
-            <h2 className="mt-3 text-3xl font-extrabold text-slate-900 sm:text-4xl">
+            <h2 className="mt-3 text-3xl text-slate-900 sm:text-4xl">
               Three quick actions, one goal
             </h2>
             <p className="mt-3 text-base leading-7 text-slate-600">
@@ -433,7 +428,7 @@ export default function Landing() {
                 <h3 className="flex items-center gap-2 text-base font-bold text-slate-900">
                   {item.title}
                   {item.highlight ? (
-                    <span className="rounded-full border border-indigo-500/30 bg-indigo-500/12 px-2 py-0.5 text-[10px] font-bold tracking-wide text-indigo-700 uppercase">
+                    <span className="rounded-full border border-indigo-600/25 bg-indigo-500/10 px-2 py-0.5 text-[10px] font-bold tracking-wide text-indigo-700 uppercase">
                       Main
                     </span>
                   ) : null}
@@ -457,16 +452,17 @@ export default function Landing() {
         <section id="why" className="scroll-mt-24 py-16">
           <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <div className="flex flex-col gap-4">
-              <p className="text-xs font-bold tracking-[0.18em] text-indigo-600 uppercase">
+              <p className="text-xs font-bold tracking-[0.18em] text-indigo-700 uppercase">
                 Why it works
               </p>
-              <h2 className="text-3xl font-extrabold text-slate-900 sm:text-4xl">
-                Speaking is the skill employers actually test
+              <h2 className="text-3xl text-slate-900 sm:text-4xl">
+                Speaking is the skill contests and employers actually test
               </h2>
               <p className="text-base leading-7 text-slate-600">
                 Reading grammar rules rarely prepares you for the moment you have
-                to answer “Tell me about yourself.” VERITASS puts you in that
-                moment, safely, every day.
+                to answer “Tell me about yourself” — in an interview, on stage, or
+                in front of a panel of judges. Veritass puts you in that moment,
+                safely, every day.
               </p>
               <ul className="flex flex-col gap-3">
                 {[
@@ -480,15 +476,15 @@ export default function Landing() {
                   },
                   {
                     icon: BadgeCheck,
-                    text: "Honest feedback: real transcript analysis, no fake pronunciation scores.",
+                    text: "Honest feedback: real transcript analysis, no invented pronunciation scores.",
                   },
                   {
                     icon: Flame,
-                    text: "A daily mission you can finish in one minute — perfect for building a habit.",
+                    text: "A daily mission you can finish in one minute — the easiest way to build the habit before contest day.",
                   },
                 ].map((item) => (
                   <li key={item.text} className="flex items-start gap-3">
-                    <span className="grid size-9 shrink-0 place-items-center rounded-2xl bg-white/70 text-indigo-600 shadow-sm">
+                    <span className="grid size-9 shrink-0 place-items-center rounded-2xl bg-white/70 text-indigo-700 shadow-sm">
                       <item.icon className="size-4" aria-hidden="true" />
                     </span>
                     <p className="pt-1 text-sm leading-6 text-slate-700">
@@ -509,7 +505,7 @@ export default function Landing() {
                     key={step}
                     className="flex items-center gap-3 rounded-2xl border border-white/70 bg-white/60 p-3"
                   >
-                    <span className="grid size-7 shrink-0 place-items-center rounded-full bg-gradient-to-br from-indigo-600 to-cyan-400 text-[11px] font-bold text-white">
+                    <span className="bg-brand-mark grid size-7 shrink-0 place-items-center rounded-full text-[11px] font-bold text-white">
                       {index + 1}
                     </span>
                     <span className="text-sm font-semibold text-slate-700">
@@ -524,14 +520,18 @@ export default function Landing() {
                     <BookOpen className="size-3.5" aria-hidden="true" />
                     Vocabulary
                   </p>
-                  <p className="text-lg font-extrabold text-slate-900">60 words</p>
+                  <p className="font-display text-xl font-semibold text-slate-900">
+                    60 words
+                  </p>
                 </div>
                 <div className="rounded-2xl bg-white/60 p-3">
                   <p className="flex items-center gap-1.5 text-xs font-bold tracking-wide text-slate-500 uppercase">
                     <Briefcase className="size-3.5" aria-hidden="true" />
                     Career topics
                   </p>
-                  <p className="text-lg font-extrabold text-slate-900">8 topics</p>
+                  <p className="font-display text-xl font-semibold text-slate-900">
+                    8 topics
+                  </p>
                 </div>
               </div>
             </GlassCard>
@@ -546,25 +546,25 @@ export default function Landing() {
           >
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute -top-24 left-1/2 size-[28rem] -translate-x-1/2 rounded-full bg-gradient-to-b from-cyan-300/40 to-transparent blur-3xl"
+              className="pointer-events-none absolute -top-24 left-1/2 size-[28rem] -translate-x-1/2 rounded-full bg-gradient-to-b from-indigo-300/25 to-transparent blur-3xl"
             />
             <div className="relative flex flex-col items-center gap-5">
               <span className="text-4xl" aria-hidden="true">
                 🎙️
               </span>
-              <h2 className="max-w-2xl text-3xl font-extrabold text-slate-900 sm:text-4xl">
+              <h2 className="max-w-2xl text-3xl text-slate-900 sm:text-4xl">
                 Your first conversation takes five minutes
               </h2>
               <p className="max-w-xl text-base leading-7 text-slate-600">
                 Start today and speak for 30 seconds to earn your first 100 XP.
-                You can practise as a guest, then create an account whenever you
+                You can practice as a guest, then create an account whenever you
                 are ready.
               </p>
               <div className="flex flex-col gap-3 sm:flex-row">
                 <Button
                   asChild
                   size="lg"
-                  className="gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 px-8 text-white"
+                  className="bg-brand gap-2 rounded-full px-8 text-white"
                 >
                   <Link to={isAuthenticated ? "/home" : "/signup"}>
                     {primaryLabel}
@@ -593,7 +593,7 @@ export default function Landing() {
         <div className="glass flex flex-col items-center justify-between gap-3 rounded-3xl px-5 py-4 sm:flex-row">
           <Wordmark compact />
           <p className="text-center text-xs text-slate-500">
-            VERITASS · English Career Quest — speak, get corrected, level up.
+            Veritass · English Career Quest — speak, get corrected, level up.
           </p>
         </div>
       </footer>

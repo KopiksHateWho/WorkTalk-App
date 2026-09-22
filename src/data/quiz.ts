@@ -23,8 +23,8 @@ export interface QuizQuestion {
 
 export const QUIZ_TOPICS = [
   { id: "workplace-english", title: "Workplace English", emoji: "💼" },
-  { id: "job-interview", title: "Job Interview", emoji: "🧑‍💼" },
-  { id: "customer-service", title: "Customer Service", emoji: "☎️" },
+  { id: "job-interview", title: "Job interview", emoji: "🧑‍💼" },
+  { id: "customer-service", title: "Customer service", emoji: "☎️" },
   { id: "teamwork", title: "Teamwork", emoji: "🤝" },
   { id: "professional-email", title: "Professional Email", emoji: "📧" },
 ] as const;

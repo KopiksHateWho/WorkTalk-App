@@ -1,5 +1,5 @@
 /**
- * Career speaking curriculum for VERITASS.
+ * Career speaking curriculum for Veritass.
  *
  * Shared by the Convex coach (scripted practice conversations) and the frontend
  * (topic library, hints, key vocabulary). These prompts are the honest
@@ -38,7 +38,7 @@ export interface CareerTopic {
 export const SPEAKING_TOPICS: CareerTopic[] = [
   {
     id: "self-introduction",
-    title: "Self Introduction",
+    title: "Self introduction",
     emoji: "👋",
     blurb: "Introduce yourself the way you would to a new team or interviewer.",
     difficulty: "Easy",
@@ -107,7 +107,7 @@ export const SPEAKING_TOPICS: CareerTopic[] = [
   },
   {
     id: "job-application",
-    title: "Job Application",
+    title: "Job application",
     emoji: "📄",
     blurb: "Talk about your CV, motivation letters, and why you applied.",
     difficulty: "Easy",
@@ -176,9 +176,9 @@ export const SPEAKING_TOPICS: CareerTopic[] = [
   },
   {
     id: "job-interview",
-    title: "Job Interview",
+    title: "Job interview",
     emoji: "🧑‍💼",
-    blurb: "Practise the interview questions that actually decide an offer.",
+    blurb: "Practice the interview questions that actually decide an offer.",
     difficulty: "Challenging",
     minutes: 8,
     xp: 160,
@@ -245,7 +245,7 @@ export const SPEAKING_TOPICS: CareerTopic[] = [
   },
   {
     id: "workplace-conversation",
-    title: "Workplace Conversation",
+    title: "Workplace conversation",
     emoji: "🏢",
     blurb: "Small talk, updates, and everyday office communication.",
     difficulty: "Medium",
@@ -373,7 +373,7 @@ export const SPEAKING_TOPICS: CareerTopic[] = [
   },
   {
     id: "customer-service",
-    title: "Customer Service",
+    title: "Customer service",
     emoji: "☎️",
     blurb: "Greet, help, and calm customers with professional English.",
     difficulty: "Medium",
@@ -501,7 +501,7 @@ export const SPEAKING_TOPICS: CareerTopic[] = [
   },
   {
     id: "professional-communication",
-    title: "Professional Communication",
+    title: "Professional communication",
     emoji: "📧",
     blurb: "Emails, phone calls, and polite professional requests.",
     difficulty: "Medium",

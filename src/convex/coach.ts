@@ -124,7 +124,7 @@ function parsePayload(raw: string): CoachPayload | null {
   return { reply, correction };
 }
 
-const SYSTEM_PROMPT = `You are VERITASS Coach, a warm English speaking tutor for university students who are preparing for their future careers.
+const SYSTEM_PROMPT = `You are Veritass Coach, a warm English speaking tutor for students who are preparing for their careers and for English competitions.
 
 You always:
 - Answer in 1-3 short sentences, encouraging and never shaming the learner. Use phrases like "Good try!", "Almost!", "Let's improve this sentence."
@@ -156,7 +156,7 @@ async function callProvider(
     });
     if (!response.ok) {
       console.warn(
-        `[VERITASS coach] provider responded ${response.status}: ${await response
+        `[Veritass coach] provider responded ${response.status}: ${await response
           .text()
           .catch(() => "")}`.slice(0, 400),
       );
@@ -168,7 +168,7 @@ async function callProvider(
     const content = json.choices?.[0]?.message?.content;
     return typeof content === "string" ? content : null;
   } catch (error) {
-    console.warn("[VERITASS coach] provider call failed", error);
+    console.warn("[Veritass coach] provider call failed", error);
     return null;
   } finally {
     clearTimeout(timeout);

@@ -12,29 +12,29 @@ import { Link } from "react-router";
 
 const BASIC_CONTENT = [
   "Greetings",
-  "Self Introduction",
+  "Self introduction",
   "Education",
   "School",
   "Hobbies",
   "Interests",
-  "Simple Workplace Vocabulary",
-  "Asking for Help",
-  "Simple Workplace Questions",
+  "Simple workplace vocabulary",
+  "Asking for help",
+  "Simple workplace questions",
 ];
 
 const INTERMEDIATE_CONTENT = [
-  "Job Interview",
-  "Work Experience",
+  "Job interview",
+  "Work experience",
   "Skills",
   "Strengths",
   "Weaknesses",
-  "Workplace Problems",
+  "Workplace problems",
   "Meetings",
   "Teamwork",
-  "Customer Service",
-  "Professional Communication",
-  "Giving Opinions",
-  "Making Requests",
+  "Customer service",
+  "Professional communication",
+  "Giving opinions",
+  "Making requests",
 ];
 
 export default function Learn() {
@@ -157,7 +157,7 @@ export default function Learn() {
         </div>
         <Button
           asChild
-          className="w-fit rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white"
+          className="w-fit rounded-full bg-brand text-white"
         >
           <Link to="/speaking/session?topic=self-introduction">Start now</Link>
         </Button>

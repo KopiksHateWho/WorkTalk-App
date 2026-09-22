@@ -91,7 +91,7 @@ export function TopicCard({
         to={href}
         className={cn(
           buttonVariants({ size: "sm" }),
-          "mt-auto w-full rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white hover:opacity-95",
+          "mt-auto w-full rounded-full bg-brand text-white hover:opacity-95",
         )}
       >
         {ctaLabel}

@@ -274,7 +274,7 @@ export const finishSession = mutation({
             : `Try adding topic words such as ${topic.keyWords.slice(0, 3).join(", ")} in your next answers.`,
       },
       pronunciation: {
-        label: wordsToPractice.length > 0 ? "Words to practise" : "Good",
+        label: wordsToPractice.length > 0 ? "Words to practice" : "Good",
         text:
           wordsToPractice.length > 0
             ? `Say these out loud slowly, then inside a full sentence: ${wordsToPractice.join(", ")}.`

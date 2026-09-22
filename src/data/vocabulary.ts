@@ -97,7 +97,7 @@ export const VOCAB_TOPICS: VocabTopic[] = [
   },
   {
     id: "job-interview",
-    title: "Job Interview",
+    title: "Job interview",
     emoji: "🧑‍💼",
     description: "Words that make you sound ready for the interview.",
     words: [
@@ -113,7 +113,7 @@ export const VOCAB_TOPICS: VocabTopic[] = [
         word: "weakness",
         meaning: "something you still need to improve",
         translation: "kelemahan",
-        example: "My weakness is public speaking, so I practise weekly.",
+        example: "My weakness is public speaking, so I practice weekly.",
       },
       {
         id: "interview-experience",
@@ -167,7 +167,7 @@ export const VOCAB_TOPICS: VocabTopic[] = [
       {
         id: "interview-skill",
         word: "skill",
-        meaning: "an ability you learn and practise",
+        meaning: "an ability you learn and practice",
         translation: "keterampilan",
         example: "Data analysis is a very useful skill.",
       },
@@ -331,7 +331,7 @@ export const VOCAB_TOPICS: VocabTopic[] = [
   },
   {
     id: "customer-service",
-    title: "Customer Service",
+    title: "Customer service",
     emoji: "☎️",
     description: "Help customers politely and clearly.",
     words: [

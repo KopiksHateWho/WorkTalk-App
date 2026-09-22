@@ -44,7 +44,7 @@ export default function Games() {
           <GameCard
             tone="teal"
             emoji="🎮"
-            title="Vocabulary Game"
+            title="Vocabulary game"
             description="Read the word, choose the meaning, and learn the example sentence. 10 questions per round with a timer and three lives."
             href="/games/vocabulary"
             ctaLabel="Play vocabulary"
@@ -58,7 +58,7 @@ export default function Games() {
           <GameCard
             tone="amber"
             emoji="⚡"
-            title="Quick Quiz"
+            title="Quick quiz"
             description="Real workplace situations: pick the best response, complete the sentence, or handle a tricky customer."
             href="/games/quiz"
             ctaLabel="Start quick quiz"
@@ -84,14 +84,14 @@ export default function Games() {
         >
           <div className="flex items-start gap-3">
             <span
-              className="grid size-12 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-indigo-600 to-cyan-400 text-2xl shadow-sm"
+              className="grid size-12 shrink-0 place-items-center rounded-2xl bg-brand-mark text-2xl shadow-sm"
               aria-hidden="true"
             >
               🎙️
             </span>
             <div>
               <p className="text-base font-bold text-slate-900">
-                Speak with the AI coach
+                Speak with the coach
               </p>
               <p className="text-sm leading-6 text-slate-600">
                 {overview?.mission && !overview.mission.completed
@@ -103,7 +103,7 @@ export default function Games() {
           <Button
             asChild
             size="lg"
-            className="gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white"
+            className="gap-2 rounded-full bg-brand text-white"
           >
             <Link to="/speaking">
               <Mic className="size-4" aria-hidden="true" />

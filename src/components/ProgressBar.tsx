@@ -18,9 +18,9 @@ const SIZES = {
 } as const;
 
 const TONES = {
-  cool: "from-indigo-500 via-blue-500 to-cyan-400",
-  teal: "from-teal-500 via-emerald-400 to-cyan-400",
-  amber: "from-amber-400 via-orange-400 to-amber-300",
+  cool: "from-indigo-700 via-indigo-500 to-sky-500",
+  teal: "from-emerald-700 via-emerald-500 to-teal-400",
+  amber: "from-amber-500 via-amber-400 to-amber-300",
 } as const;
 
 export function ProgressBar({

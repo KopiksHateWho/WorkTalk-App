@@ -51,7 +51,7 @@ export function GameResult({
             <p className="text-xs font-bold tracking-[0.14em] text-indigo-600 uppercase">
               {title}
             </p>
-            <h2 className="mt-1 text-2xl font-extrabold text-slate-900">
+            <h2 className="mt-1 text-2xl text-slate-900">
               {headline}
             </h2>
           </div>
@@ -121,7 +121,7 @@ export function GameResult({
         <Button
           asChild
           size="lg"
-          className="gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white"
+          className="gap-2 rounded-full bg-brand text-white"
         >
           <Link to={backHref}>
             {backLabel}

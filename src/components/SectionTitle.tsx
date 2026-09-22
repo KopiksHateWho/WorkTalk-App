@@ -30,7 +30,7 @@ export function SectionTitle({
             {eyebrow}
           </p>
         ) : null}
-        <h2 className="text-xl font-bold text-slate-900 sm:text-2xl">{title}</h2>
+        <h2 className="text-xl text-slate-900 sm:text-2xl">{title}</h2>
         {description ? (
           <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
             {description}
@@ -61,7 +61,7 @@ export function PageHeader({
       )}
     >
       <div>
-        <h1 className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">
+        <h1 className="text-2xl text-slate-900 sm:text-[2rem]">
           {title}
         </h1>
         {subtitle ? (

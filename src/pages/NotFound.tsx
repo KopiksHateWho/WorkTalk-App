@@ -17,25 +17,25 @@ export default function NotFound() {
       >
         <GlassCard tone="strong" className="flex flex-col items-center gap-4 p-8 text-center">
           <span
-            className="grid size-14 place-items-center rounded-3xl bg-gradient-to-br from-indigo-600 to-cyan-400 text-white shadow-lg"
+            className="grid size-14 place-items-center rounded-3xl bg-brand-mark text-white shadow-lg"
             aria-hidden="true"
           >
             <Compass className="size-7" />
           </span>
           <div>
             <p className="text-4xl font-extrabold text-slate-900">404</p>
-            <h1 className="mt-1 text-lg font-bold text-slate-800">
+            <h1 className="mt-1 text-xl text-slate-900">
               We couldn't find that page
             </h1>
             <p className="mt-2 text-sm leading-6 text-slate-600">
               The link may be old, or the page moved. Your XP is safe — head back
-              to your dashboard and keep practising.
+              to your dashboard and keep practicing.
             </p>
           </div>
           <div className="flex flex-col gap-2 sm:flex-row">
             <Button
               asChild
-              className="gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white"
+              className="gap-2 rounded-full bg-brand text-white"
             >
               <Link to="/home">
                 <ArrowLeft className="size-4" aria-hidden="true" />

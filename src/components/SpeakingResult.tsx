@@ -52,7 +52,7 @@ export function SpeakingResult({
               <p className="text-xs font-bold tracking-[0.14em] text-indigo-600 uppercase">
                 {topicTitle}
               </p>
-              <h1 className="text-2xl font-extrabold text-slate-900 sm:text-3xl">
+              <h1 className="text-2xl text-slate-900 sm:text-3xl">
                 Your speaking result 🎉
               </h1>
               <p className="text-sm leading-6 text-slate-600">
@@ -145,7 +145,7 @@ export function SpeakingResult({
           <SectionTitle
             eyebrow="Feedback"
             title="How your speaking went"
-            description="Qualitative notes based on your transcript — VERITASS never invents scores."
+            description="Qualitative notes based on your transcript — Veritass never invents scores."
           />
           <FeedbackCard feedback={summary.feedback} />
         </section>
@@ -279,7 +279,7 @@ export function SpeakingResult({
           type="button"
           size="lg"
           onClick={onContinue}
-          className="gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white"
+          className="gap-2 rounded-full bg-brand text-white"
         >
           Continue
           <ArrowRight className="size-4" aria-hidden="true" />

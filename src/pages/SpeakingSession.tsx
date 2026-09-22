@@ -231,7 +231,7 @@ export default function SpeakingSession() {
 
         <GlassCard tone="strong" className="flex flex-col gap-4 p-5 sm:p-6">
           <div className="flex items-start gap-3">
-            <span className="grid size-10 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-indigo-600 to-cyan-400 text-white">
+            <span className="grid size-10 shrink-0 place-items-center rounded-2xl bg-brand-mark text-white">
               <Mic className="size-5" aria-hidden="true" />
             </span>
             <div>
@@ -301,7 +301,7 @@ export default function SpeakingSession() {
             size="lg"
             onClick={() => void beginSession()}
             disabled={starting}
-            className="w-full gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white sm:w-fit sm:px-10"
+            className="w-full gap-2 rounded-full bg-brand text-white sm:w-fit sm:px-10"
           >
             <Mic className="size-4" aria-hidden="true" />
             {starting ? "Opening the conversation..." : "Start speaking"}
@@ -573,7 +573,7 @@ export default function SpeakingSession() {
                   type="button"
                   disabled={!draft.trim() || sending || conversationFull}
                   onClick={() => void handleSend()}
-                  className="gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white"
+                  className="gap-2 rounded-full bg-brand text-white"
                 >
                   Send answer
                   <ArrowRight className="size-4" aria-hidden="true" />
@@ -606,7 +606,7 @@ export default function SpeakingSession() {
               size="lg"
               disabled={!canFinish || finishing}
               onClick={() => void handleFinish()}
-              className="w-full gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white sm:w-fit sm:px-10"
+              className="w-full gap-2 rounded-full bg-brand text-white sm:w-fit sm:px-10"
             >
               {finishing ? "Saving your session..." : "Finish & see feedback"}
               <CheckCircle2 className="size-4" aria-hidden="true" />

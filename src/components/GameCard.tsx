@@ -18,9 +18,9 @@ export interface GameCardProps {
 }
 
 const TONE_RING = {
-  indigo: "from-indigo-500/20 via-blue-400/10 to-transparent",
-  amber: "from-amber-400/25 via-orange-300/10 to-transparent",
-  teal: "from-teal-400/25 via-cyan-300/10 to-transparent",
+  indigo: "from-indigo-500/18 via-blue-400/8 to-transparent",
+  amber: "from-amber-400/18 via-orange-300/8 to-transparent",
+  teal: "from-sky-400/18 via-slate-300/8 to-transparent",
 } as const;
 
 export function GameCard({
@@ -78,7 +78,7 @@ export function GameCard({
         to={href}
         className={cn(
           buttonVariants({ size: featured ? "lg" : "default" }),
-          "relative mt-auto w-full gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white shadow-sm hover:opacity-95",
+          "relative mt-auto w-full gap-2 rounded-full bg-brand text-white shadow-sm hover:opacity-95",
         )}
       >
         {ctaLabel}

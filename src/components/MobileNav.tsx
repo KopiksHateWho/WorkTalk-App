@@ -30,7 +30,7 @@ export function MobileNav() {
                   cn(
                     "flex min-h-[52px] flex-col items-center justify-center gap-0.5 rounded-2xl px-2 py-1.5 text-[11px] font-bold transition-colors",
                     isActive
-                      ? "bg-gradient-to-br from-indigo-600 to-blue-500 text-white shadow-sm"
+                      ? "bg-brand-mark text-white shadow-sm"
                       : "text-slate-600 hover:bg-white/60",
                   )
                 }

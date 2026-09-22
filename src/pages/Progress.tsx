@@ -44,7 +44,7 @@ export default function Progress() {
   return (
     <div className="flex flex-col gap-8">
       <PageHeader
-        title="My Progress"
+        title="My progress"
         subtitle="Everything here comes from your real practice — no estimates, no invented scores."
       >
         <div className="flex flex-wrap gap-2">
@@ -60,7 +60,7 @@ export default function Progress() {
             <p className="text-xs font-bold tracking-[0.14em] text-indigo-600 uppercase">
               Level {level.level}
             </p>
-            <h2 className="text-xl font-extrabold text-slate-900">{level.title}</h2>
+            <h2 className="text-xl text-slate-900">{level.title}</h2>
           </div>
           <p className="text-sm text-slate-600">
             {level.nextXp === null
@@ -166,7 +166,7 @@ export default function Progress() {
               </p>
               <Button
                 asChild
-                className="rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white"
+                className="rounded-full bg-brand text-white"
               >
                 <Link to="/speaking/session?mission=1">
                   Start your first lesson
@@ -248,12 +248,12 @@ export default function Progress() {
           </span>
           <span className="inline-flex items-center gap-1.5">
             <BarChart3 className="size-4 text-teal-600" aria-hidden="true" />
-            {totals.wordsSeen} words practised
+            {totals.wordsSeen} words practiced
           </span>
         </div>
         <Button
           asChild
-          className="w-fit gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white"
+          className="w-fit gap-2 rounded-full bg-brand text-white"
         >
           <Link to="/speaking">
             Continue learning

@@ -26,9 +26,7 @@ export function ConversationBubble({
       <span
         className={cn(
           "grid size-9 shrink-0 place-items-center rounded-2xl shadow-sm",
-          isAi
-            ? "bg-gradient-to-br from-indigo-500 to-cyan-400 text-white"
-            : "bg-white/80 text-slate-600",
+          isAi ? "bg-brand-mark text-white" : "bg-white/80 text-slate-600",
         )}
         aria-hidden="true"
       >
@@ -37,7 +35,7 @@ export function ConversationBubble({
 
       <div className={cn("max-w-[85%] sm:max-w-[78%]", !isAi && "text-right")}>
         <p className="mb-1 text-[11px] font-bold tracking-[0.12em] text-slate-500 uppercase">
-          {isAi ? "AI Coach" : "You"}
+          {isAi ? "Coach" : "You"}
         </p>
         <div
           className={cn(

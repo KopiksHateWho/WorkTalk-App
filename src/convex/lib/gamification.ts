@@ -1,5 +1,5 @@
 /**
- * Shared gamification rules for VERITASS.
+ * Shared gamification rules for Veritass.
  *
  * Pure module (no Convex imports) so the backend and the React frontend use
  * exactly the same numbers.

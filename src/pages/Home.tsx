@@ -77,7 +77,7 @@ export default function Home() {
           </p>
           <Button
             asChild
-            className="w-fit rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white"
+            className="w-fit rounded-full bg-brand text-white"
           >
             <Link to="/signup">Create account</Link>
           </Button>
@@ -91,7 +91,7 @@ export default function Home() {
             <p className="text-xs font-bold tracking-[0.14em] text-indigo-600 uppercase">
               Level {level.level}
             </p>
-            <h2 className="text-xl font-extrabold text-slate-900">{level.title}</h2>
+            <h2 className="text-xl text-slate-900">{level.title}</h2>
           </div>
           <div className="flex flex-wrap gap-2">
             <Chip>
@@ -136,13 +136,13 @@ export default function Home() {
         >
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute -top-20 -right-16 size-56 rounded-full bg-gradient-to-br from-cyan-300/40 to-transparent blur-3xl"
+            className="pointer-events-none absolute -top-20 -right-16 size-56 rounded-full bg-gradient-to-br from-indigo-300/35 to-transparent blur-3xl"
           />
           <div className="relative flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-3">
                 <span
-                  className="grid size-12 place-items-center rounded-2xl bg-gradient-to-br from-indigo-600 to-cyan-400 text-2xl shadow-sm"
+                  className="grid size-12 place-items-center rounded-2xl bg-brand-mark text-2xl shadow-sm"
                   aria-hidden="true"
                 >
                   🎙️
@@ -180,7 +180,7 @@ export default function Home() {
                 <Button
                   asChild
                   size="lg"
-                  className="gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white"
+                  className="gap-2 rounded-full bg-brand text-white"
                 >
                   <Link to="/speaking/session?mission=1">
                     <Mic className="size-4" aria-hidden="true" />
@@ -220,8 +220,8 @@ export default function Home() {
               featured
               tone="indigo"
               emoji="🎙️"
-              title="Speaking Practice"
-              description="Talk with the AI coach, get your sentence corrected naturally, then try again. This is the heart of VERITASS."
+              title="Speaking practice"
+              description="Talk with the AI coach, get your sentence corrected naturally, then try again. This is the heart of Veritass."
               href="/speaking"
               ctaLabel="Start speaking"
               meta={
@@ -243,7 +243,7 @@ export default function Home() {
           <GameCard
             tone="teal"
             emoji="🎮"
-            title="Vocabulary Game"
+            title="Vocabulary game"
             description="Guess words and learn the English you will use at work."
             href="/games/vocabulary"
             ctaLabel="Play"
@@ -261,7 +261,7 @@ export default function Home() {
           <GameCard
             tone="amber"
             emoji="⚡"
-            title="Quick Quiz"
+            title="Quick quiz"
             description="Short workplace questions: choose the best response and learn why."
             href="/games/quiz"
             ctaLabel="Start quiz"
@@ -305,7 +305,7 @@ export default function Home() {
             </div>
             <Button
               asChild
-              className="gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white"
+              className="gap-2 rounded-full bg-brand text-white"
             >
               <Link to={continueLearning.href}>
                 Continue
@@ -334,7 +334,7 @@ export default function Home() {
               </p>
               <Button
                 asChild
-                className="mt-1 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white"
+                className="mt-1 rounded-full bg-brand text-white"
               >
                 <Link to="/speaking/session?mission=1">
                   Start your first lesson

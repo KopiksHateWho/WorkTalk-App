@@ -50,7 +50,7 @@ export function MicrophoneButton({
           "min-h-[88px] min-w-[88px] touch-manipulation",
           listening
             ? "border-rose-200/70 bg-gradient-to-br from-rose-500 to-red-500 shadow-rose-500/40"
-            : "border-white/60 bg-gradient-to-br from-indigo-600 to-blue-500 hover:scale-[1.03]",
+            : "border-white/60 bg-brand-mark hover:scale-[1.03]",
           state === "disabled" &&
             "border-slate-200 bg-slate-300 text-slate-500 shadow-none",
           processing && "from-indigo-400 to-blue-400",
