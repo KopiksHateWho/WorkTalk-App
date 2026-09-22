@@ -258,14 +258,14 @@ function Auth({ redirectAfterAuth, mode = "login" }: AuthProps = {}) {
 
                 {isGuest ? (
                   <p className="mt-4 rounded-2xl border border-amber-400/30 bg-amber-300/15 p-3 text-xs leading-5 text-amber-900">
-                    You are practising as a guest right now. Creating an account
+                    You are practicing as a guest right now. Creating an account
                     starts a saved profile — the guest XP stays in the guest
                     session and is not transferred.
                   </p>
                 ) : (
                   <p className="mt-4 rounded-2xl border border-amber-400/30 bg-amber-300/15 p-3 text-xs leading-5 text-amber-900">
                     Guest progress may not be permanently saved. You can create an
-                    account later and keep practising the same way.
+                    account later and keep practicing the same way.
                   </p>
                 )}
 

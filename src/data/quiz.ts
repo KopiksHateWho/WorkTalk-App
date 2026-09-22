@@ -208,14 +208,14 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     context: "A client calls and is angry about a delay.",
     prompt: "Which sequence handles the situation best?",
     options: [
-      "Listen, apologise, confirm the facts, offer a solution, follow up",
+      "Listen, apologize, confirm the facts, offer a solution, follow up",
       "Interrupt, explain that delays happen, end the call",
       "Promise anything to make them stop talking",
       "Transfer the call without explanation",
     ],
     correctIndex: 0,
     explanation:
-      "Listen → apologise → confirm → solve → follow up is the standard service flow.",
+      "Listen → apologize → confirm → solve → follow up is the standard service flow.",
   },
   {
     id: "q-work-13",
@@ -319,7 +319,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     prompt:
       "You made a mistake in an email that already went to a client. What is the best action?",
     options: [
-      "Send a short correction immediately, apologise for the confusion, and check attachments twice in future",
+      "Send a short correction immediately, apologize for the confusion, and check attachments twice in future",
       "Ignore it and hope nobody noticed",
       "Blame the email software",
       "Wait until the client complains",

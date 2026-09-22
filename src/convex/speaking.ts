@@ -258,7 +258,7 @@ export const finishSession = mutation({
             ? "Great"
             : corrections.length <= 2
               ? "Good"
-              : "Keep practising",
+              : "Keep practicing",
         text:
           corrections.length === 0
             ? "No common mistakes found in this conversation. Keep the same sentence structure."

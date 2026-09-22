@@ -120,7 +120,7 @@ export const VOCAB_TOPICS: VocabTopic[] = [
         word: "experience",
         meaning: "knowledge or skill gained by doing something",
         translation: "pengalaman",
-        example: "I have experience organising campus events.",
+        example: "I have experience organizing campus events.",
       },
       {
         id: "interview-qualification",

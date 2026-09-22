@@ -89,8 +89,8 @@ export const SPEAKING_TOPICS: CareerTopic[] = [
         },
         {
           ai: "Tell me about a project or experience you are proud of.",
-          hint: "Use past tense: organised, led, handled, presented.",
-          example: "I organised a campus event for 200 students and handled the sponsor communication.",
+          hint: "Use past tense: organized, led, handled, presented.",
+          example: "I organized a campus event for 200 students and handled the sponsor communication.",
         },
         {
           ai: "Where do you see yourself in three years, and why?",
@@ -149,7 +149,7 @@ export const SPEAKING_TOPICS: CareerTopic[] = [
         {
           ai: "You are applying for a marketing role. Tell me why you are a strong candidate.",
           hint: "One clear claim plus one piece of evidence.",
-          example: "I am a strong candidate because I have run two social media campaigns for a campus organisation.",
+          example: "I am a strong candidate because I have run two social media campaigns for a campus organization.",
         },
         {
           ai: "How do you make sure your application matches the job requirements?",
@@ -196,7 +196,7 @@ export const SPEAKING_TOPICS: CareerTopic[] = [
         {
           ai: "Thanks for coming in. Tell me about yourself.",
           hint: "Name, study, one strength.",
-          example: "I am Sari, an accounting student, and I am good at organising data.",
+          example: "I am Sari, an accounting student, and I am good at organizing data.",
         },
         {
           ai: "What are your strengths?",
@@ -232,8 +232,8 @@ export const SPEAKING_TOPICS: CareerTopic[] = [
         },
         {
           ai: "Describe how you would handle an angry customer on the phone.",
-          hint: "Listen, apologise, act, follow up.",
-          example: "First I would listen without interrupting, apologise for the issue, then confirm the fix and follow up by email.",
+          hint: "Listen, apologize, act, follow up.",
+          example: "First I would listen without interrupting, apologize for the issue, then confirm the fix and follow up by email.",
         },
         {
           ai: "Why should we hire you instead of another candidate?",
@@ -300,7 +300,7 @@ export const SPEAKING_TOPICS: CareerTopic[] = [
           example: "I explain what I already tried and ask for advice on the specific step I am stuck on.",
         },
         {
-          ai: "Describe how you organise your tasks when you have many deadlines.",
+          ai: "Describe how you organize your tasks when you have many deadlines.",
           hint: "Mention a real method: priority, calendar, checklist.",
           example: "I list everything by priority, block time in my calendar, and review the list every morning.",
         },
@@ -351,7 +351,7 @@ export const SPEAKING_TOPICS: CareerTopic[] = [
         {
           ai: "Tell me about a time you worked in a team and faced a problem.",
           hint: "Situation, action, result.",
-          example: "Our group disagreed about the design, so I organised a short meeting and we agreed on one solution.",
+          example: "Our group disagreed about the design, so I organized a short meeting and we agreed on one solution.",
         },
         {
           ai: "How do you give feedback to a teammate without sounding harsh?",
@@ -386,7 +386,7 @@ export const SPEAKING_TOPICS: CareerTopic[] = [
       "complaint",
       "solution",
       "refund",
-      "apologise",
+      "apologize",
     ],
     levels: {
       basic: [
@@ -414,8 +414,8 @@ export const SPEAKING_TOPICS: CareerTopic[] = [
       intermediate: [
         {
           ai: "A client calls and is upset because their order is two weeks late. Handle the call.",
-          hint: "Listen, apologise, confirm facts, offer options.",
-          example: "Thank you for letting me know, and I apologise for the delay. I have checked your order and I can offer express delivery or a full refund.",
+          hint: "Listen, apologize, confirm facts, offer options.",
+          example: "Thank you for letting me know, and I apologize for the delay. I have checked your order and I can offer express delivery or a full refund.",
         },
         {
           ai: "The customer asks for something your company cannot provide. What do you say?",
@@ -425,7 +425,7 @@ export const SPEAKING_TOPICS: CareerTopic[] = [
         {
           ai: "How do you end a difficult customer call?",
           hint: "Confirm the agreement and thank them.",
-          example: "I summarise what we agreed, confirm the timeline, and thank them for their patience.",
+          example: "I summarize what we agreed, confirm the timeline, and thank them for their patience.",
         },
         {
           ai: "A customer complains publicly on social media. How do you respond?",
@@ -484,16 +484,16 @@ export const SPEAKING_TOPICS: CareerTopic[] = [
         {
           ai: "A decision was made that you disagree with. How do you raise it in the meeting?",
           hint: "Respectful, evidence-based.",
-          example: "I understand the decision; may I share one concern about the timeline before we finalise it?",
+          example: "I understand the decision; may I share one concern about the timeline before we finalize it?",
         },
         {
           ai: "How do you make sure everyone leaves the meeting with clear actions?",
           hint: "Mention owner and deadline.",
-          example: "I summarise each action with a name and a date, then I share the minutes in the group chat.",
+          example: "I summarize each action with a name and a date, then I share the minutes in the group chat.",
         },
         {
           ai: "Your manager asks you to take on an extra task during the meeting.",
-          hint: "Accept conditionally and prioritise.",
+          hint: "Accept conditionally and prioritize.",
           example: "I can take that on, but I would need to move the client report to next week — is that acceptable?",
         },
       ],
@@ -558,7 +558,7 @@ export const SPEAKING_TOPICS: CareerTopic[] = [
         {
           ai: "You made a mistake in a client email. How do you handle it?",
           hint: "Own it, correct it, prevent it.",
-          example: "I would send a short correction immediately, apologise for the confusion, and double-check attachments before sending in future.",
+          example: "I would send a short correction immediately, apologize for the confusion, and double-check attachments before sending in future.",
         },
       ],
     },

@@ -52,7 +52,7 @@ export default function SpeakingSession() {
   const levelParam = searchParams.get("level");
   const sessionParam = searchParams.get("session");
 
-  const [topicId, setTopicId] = useState(topicParam ?? "self-introduction");
+  const [topicId] = useState(topicParam ?? "self-introduction");
   const [level, setLevel] = useState<EnglishLevel>(
     levelParam === "intermediate" ? "intermediate" : "basic",
   );

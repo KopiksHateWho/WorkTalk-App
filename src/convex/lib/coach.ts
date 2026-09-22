@@ -49,7 +49,7 @@ const GRAMMAR_RULES: GrammarRule[] = [
     id: "work-in-company",
     pattern: /\bwork in (a |an )?(company|office|firm|bank)\b/i,
     replacement: "work at $2",
-    explanation: "We say “work at” a company or organisation.",
+    explanation: "We say “work at” a company or organization.",
     tip: "“I work at a marketing agency.”",
   },
   {
@@ -423,7 +423,7 @@ export function promptCount(topic: CareerTopic, level: EnglishLevel): number {
   return topic.levels[level].length;
 }
 
-/** Words worth practising out loud, based on what the learner actually said. */
+/** Words worth practicing out loud, based on what the learner actually said. */
 export function practiceWords(
   topic: CareerTopic,
   transcripts: string[],

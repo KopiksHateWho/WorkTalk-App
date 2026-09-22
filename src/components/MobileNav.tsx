@@ -11,7 +11,7 @@ const ITEMS = [
 
 /**
  * Bottom navigation for small screens. Every target is at least 44px tall and
- * the active item is marked with colour, weight and an icon, never colour alone.
+ * the active item is marked with color, weight and an icon, never color alone.
  */
 export function MobileNav() {
   return (

@@ -158,7 +158,7 @@ export function shiftDayKey(key: string, days: number): string {
   return dayKey(date.getTime());
 }
 
-/** Streak after practising on `today` given the previous day and streak. */
+/** Streak after practicing on `today` given the previous day and streak. */
 export function nextStreak(
   lastActiveDate: string | undefined,
   streak: number,

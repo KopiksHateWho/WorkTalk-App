@@ -5,7 +5,6 @@ import {
   StreakBadge,
   XPBadge,
 } from "@/components/Badges";
-import { ConversationBubble } from "@/components/ConversationBubble";
 import { GameCard } from "@/components/GameCard";
 import { GlassCard } from "@/components/GlassCard";
 import { ProgressBar } from "@/components/ProgressBar";
@@ -117,7 +116,7 @@ export default function Home() {
         />
         <p className="text-xs text-slate-500">
           {level.nextXp === null
-            ? "You reached the highest level — keep practising to stay sharp."
+            ? "You reached the highest level — keep practicing to stay sharp."
             : `${level.xpToNext} XP to the next level. One speaking session earns up to 140 XP.`}
         </p>
       </GlassCard>
