@@ -318,7 +318,7 @@ export default function Landing() {
 
             <div
               aria-hidden="true"
-              className="animate-float absolute -top-6 -right-4 hidden rounded-2xl border border-white/70 bg-white/70 px-4 py-3 shadow-lg backdrop-blur-md sm:block"
+              className="animate-float absolute -top-6 -right-4 hidden rounded-2xl border border-white/70 bg-white/75 px-4 py-3 shadow-lg sm:block"
             >
               <p className="flex items-center gap-1.5 text-xs font-bold text-slate-700">
                 <Star className="size-3.5 fill-amber-400 text-amber-500" />
@@ -327,7 +327,7 @@ export default function Landing() {
             </div>
             <div
               aria-hidden="true"
-              className="animate-float absolute -bottom-6 -left-4 hidden rounded-2xl border border-white/70 bg-white/70 px-4 py-3 shadow-lg backdrop-blur-md [animation-delay:-5s] sm:block"
+              className="animate-float absolute -bottom-6 -left-4 hidden rounded-2xl border border-white/70 bg-white/75 px-4 py-3 shadow-lg [animation-delay:-5s] sm:block"
             >
               <p className="flex items-center gap-1.5 text-xs font-bold text-slate-700">
                 <Flame className="size-3.5 text-orange-500" />

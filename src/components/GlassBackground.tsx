@@ -1,18 +1,18 @@
 /**
  * Ambient backdrop for the light glassmorphism theme. Purely decorative —
- * hidden from assistive technology and never interactive. Kept to two cool
- * washes plus a slate floor so the room behind the panels stays calm.
+ * hidden from assistive technology and never interactive.
+ *
+ * The cool washes are painted straight into a single fixed layer instead of
+ * three enormous blurred circles that float forever. An animating full-screen
+ * `blur()` has to be re-rendered on the GPU every frame, which is what made
+ * phones stutter while scrolling; painted gradients in a fixed layer are
+ * drawn once and reused. The palette is unchanged.
  */
 export function GlassBackground() {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
-    >
-      <div className="animate-float absolute -top-40 -left-32 size-[26rem] rounded-full bg-indigo-300/25 blur-3xl" />
-      <div className="animate-float absolute -top-24 -right-24 size-[22rem] rounded-full bg-sky-300/20 blur-3xl [animation-delay:-4s]" />
-      <div className="animate-float absolute -bottom-40 left-1/3 size-[30rem] rounded-full bg-slate-400/20 blur-3xl [animation-delay:-8s]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,rgba(255,255,255,0.95),transparent_60%)]" />
-    </div>
+      className="room-wash pointer-events-none fixed inset-0 -z-10"
+    />
   );
 }
