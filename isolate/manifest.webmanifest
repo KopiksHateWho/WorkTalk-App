@@ -1,0 +1,17 @@
+{
+  "name": "WorkTalk Quest — Speak English for Work",
+  "short_name": "WorkTalk Quest",
+  "description": "Challenge-based career English: vocabulary rounds, quick workplace quizzes and speaking practice with feedback on every answer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f7fb",
+  "theme_color": "#f6f7fb",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
