@@ -10,7 +10,6 @@ import {
   BadgeCheck,
   BookOpen,
   Briefcase,
-  CheckCircle2,
   Flame,
   GraduationCap,
   Mic,
@@ -208,29 +207,6 @@ export default function Landing() {
               </Button>
             </div>
 
-            <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-600">
-              <span className="inline-flex items-center gap-1.5">
-                <CheckCircle2
-                  className="size-4 text-emerald-600"
-                  aria-hidden="true"
-                />
-                No password needed
-              </span>
-              <span className="inline-flex items-center gap-1.5">
-                <CheckCircle2
-                  className="size-4 text-emerald-600"
-                  aria-hidden="true"
-                />
-                Guest mode included
-              </span>
-              <span className="inline-flex items-center gap-1.5">
-                <CheckCircle2
-                  className="size-4 text-emerald-600"
-                  aria-hidden="true"
-                />
-                Works on your phone
-              </span>
-            </div>
           </motion.div>
 
           {/* Conversation preview */}
