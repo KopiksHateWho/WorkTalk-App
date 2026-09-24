@@ -145,7 +145,7 @@ export function SpeakingResult({
           <SectionTitle
             eyebrow="Feedback"
             title="How your speaking went"
-            description="Qualitative notes based on your transcript — Veritass never invents scores."
+            description="Qualitative notes based on your transcript — WorkTalk Quest never invents scores."
           />
           <FeedbackCard feedback={summary.feedback} />
         </section>

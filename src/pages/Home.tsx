@@ -220,7 +220,7 @@ export default function Home() {
               tone="indigo"
               emoji="🎙️"
               title="Speaking practice"
-              description="Talk with the AI coach, get your sentence corrected naturally, then try again. This is the heart of Veritass."
+              description="Talk with the AI coach, get your sentence corrected naturally, then try again. This is the heart of WorkTalk Quest."
               href="/speaking"
               ctaLabel="Start speaking"
               meta={

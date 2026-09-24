@@ -104,7 +104,7 @@ export default function Settings() {
     <div className="flex flex-col gap-8">
       <PageHeader
         title="Settings"
-        subtitle="Adjust how Veritass coaches you. Changes apply to your next conversation."
+        subtitle="Adjust how WorkTalk Quest coaches you. Changes apply to your next conversation."
       />
 
       <section className="flex flex-col gap-3">
@@ -236,7 +236,7 @@ export default function Settings() {
             </div>
             <p className="text-sm leading-6 text-slate-600">
               {micSupported
-                ? "Your browser supports speech recognition. Veritass only listens while the microphone button shows “Recording”, and audio is never stored."
+                ? "Your browser supports speech recognition. WorkTalk Quest only listens while the microphone button shows “Recording”, and audio is never stored."
                 : "Speech recognition isn't available in this browser, so you can type your answers. Everything else — corrections, feedback and XP — stays the same."}
             </p>
           </GlassCard>

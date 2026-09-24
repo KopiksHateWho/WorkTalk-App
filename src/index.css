@@ -43,7 +43,7 @@
 }
 
 /* CHANGE VALUES FOR THEME */
-/* Veritass — light glassmorphism, restrained cool palette (deep indigo on slate) */
+/* WorkTalk Quest — light glassmorphism, restrained cool palette (deep indigo on slate) */
 :root {
   --radius: 1rem;
   --background: oklch(0.987 0.005 264);
@@ -85,13 +85,13 @@
     "Segoe UI", sans-serif;
   --font-display:
     "Fraunces", "Iowan Old Style", ui-serif, Georgia, Cambria, serif;
-  --animate-float: veritass-float 12s ease-in-out infinite;
-  --animate-pop: veritass-pop 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-  --animate-pulse-ring: veritass-pulse-ring 1.8s ease-out infinite;
-  --animate-shimmer: veritass-shimmer 2.4s linear infinite;
+  --animate-float: worktalk-float 12s ease-in-out infinite;
+  --animate-pop: worktalk-pop 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  --animate-pulse-ring: worktalk-pulse-ring 1.8s ease-out infinite;
+  --animate-shimmer: worktalk-shimmer 2.4s linear infinite;
 }
 
-@keyframes veritass-float {
+@keyframes worktalk-float {
   0%,
   100% {
     transform: translate3d(0, 0, 0) scale(1);
@@ -101,7 +101,7 @@
   }
 }
 
-@keyframes veritass-pop {
+@keyframes worktalk-pop {
   0% {
     transform: scale(0.94);
     opacity: 0;
@@ -112,7 +112,7 @@
   }
 }
 
-@keyframes veritass-pulse-ring {
+@keyframes worktalk-pulse-ring {
   0% {
     transform: scale(0.9);
     opacity: 0.55;
@@ -123,7 +123,7 @@
   }
 }
 
-@keyframes veritass-shimmer {
+@keyframes worktalk-shimmer {
   0% {
     background-position: -200% 0;
   }

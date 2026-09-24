@@ -3,7 +3,7 @@ import { defineSchema, defineTable } from "convex/server";
 import { Infer, v } from "convex/values";
 
 /* ------------------------------------------------------------------ *
- * Veritass data model
+ * WorkTalk Quest data model
  * ------------------------------------------------------------------ */
 
 export const englishLevelValidator = v.union(

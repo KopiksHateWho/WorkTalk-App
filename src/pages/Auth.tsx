@@ -133,7 +133,7 @@ function Auth({ redirectAfterAuth, mode = "login" }: AuthProps = {}) {
             <Wordmark />
           </Link>
           <h1 className="text-4xl text-slate-900">
-            Welcome to <span className="text-gradient-cool">Veritass</span>
+            Welcome to <span className="text-gradient-cool">WorkTalk Quest</span>
           </h1>
           <p className="max-w-md text-base leading-7 text-slate-600">
             Practice real workplace English out loud. The coach listens, corrects
@@ -270,7 +270,7 @@ function Auth({ redirectAfterAuth, mode = "login" }: AuthProps = {}) {
                 )}
 
                 <p className="mt-5 text-center text-sm text-slate-600">
-                  {isSignup ? "Already have an account? " : "New to Veritass? "}
+                  {isSignup ? "Already have an account? " : "New to WorkTalk Quest? "}
                   <Link
                     to={isSignup ? "/login" : "/signup"}
                     className="font-semibold text-indigo-700 underline-offset-4 hover:underline"

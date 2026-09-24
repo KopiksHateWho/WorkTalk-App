@@ -168,7 +168,7 @@ export default function Landing() {
 
             <div>
               <p className="text-sm font-bold tracking-[0.3em] text-slate-500 uppercase">
-                Veritass
+                WorkTalk Quest
               </p>
               <h1 className="mt-3 text-4xl leading-[1.06] text-slate-900 sm:text-5xl lg:text-6xl">
                 English Speaking
@@ -180,7 +180,8 @@ export default function Landing() {
             </div>
 
             <p className="max-w-xl text-base leading-7 text-slate-600 sm:text-lg">
-              Learn something new every day — then say it out loud. Veritass turns
+              Learn something new every day — then say it out loud. WorkTalk Quest
+              turns
               real workplace English into a friendly challenge: you speak, the
               coach listens, your sentence comes back more natural, and you try
               again until it sounds like you.
@@ -461,7 +462,7 @@ export default function Landing() {
               <p className="text-base leading-7 text-slate-600">
                 Reading grammar rules rarely prepares you for the moment you have
                 to answer “Tell me about yourself” — in an interview, on stage, or
-                in front of a panel of judges. Veritass puts you in that moment,
+                in front of a panel of judges. WorkTalk Quest puts you in that moment,
                 safely, every day.
               </p>
               <ul className="flex flex-col gap-3">
@@ -593,7 +594,7 @@ export default function Landing() {
         <div className="glass flex flex-col items-center justify-between gap-3 rounded-3xl px-5 py-4 sm:flex-row">
           <Wordmark compact />
           <p className="text-center text-xs text-slate-500">
-            Veritass · English Career Quest — speak, get corrected, level up.
+            WorkTalk Quest — speak, get corrected, level up.
           </p>
         </div>
       </footer>

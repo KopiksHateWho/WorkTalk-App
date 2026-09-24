@@ -1,5 +1,5 @@
 /**
- * Career speaking curriculum for Veritass.
+ * Career speaking curriculum for WorkTalk Quest.
  *
  * Shared by the Convex coach (scripted practice conversations) and the frontend
  * (topic library, hints, key vocabulary). These prompts are the honest

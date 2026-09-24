@@ -34,11 +34,11 @@ export function Wordmark({ compact = false }: { compact?: boolean }) {
       </span>
       <span className="leading-tight">
         <span className="font-display block text-lg font-semibold text-slate-900">
-          Veritass
+          WorkTalk <span className="text-gradient-cool">Quest</span>
         </span>
         {!compact ? (
           <span className="block text-[10px] font-semibold tracking-[0.16em] text-slate-500 uppercase">
-            English Career Quest
+            Speak English for Work
           </span>
         ) : null}
       </span>
@@ -110,7 +110,7 @@ export function Navbar() {
                 className="size-10 rounded-2xl border border-white/70 bg-white/70 hover:bg-white"
               >
                 <span className="bg-brand-mark grid size-7 place-items-center rounded-full text-[11px] font-bold text-white">
-                  {initials || "V"}
+                  {initials || "W"}
                 </span>
               </Button>
             </DropdownMenuTrigger>
