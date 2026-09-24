@@ -206,7 +206,6 @@ export default function Landing() {
                 <a href="#how-it-works">Explore</a>
               </Button>
             </div>
-
           </motion.div>
 
           {/* Conversation preview */}
