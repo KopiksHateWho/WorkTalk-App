@@ -1,5 +1,6 @@
 import { AiModeBadge, Chip } from "@/components/Badges";
 import { GlassCard } from "@/components/GlassCard";
+import { MicrophoneButton } from "@/components/MicrophoneButton";
 import { Modal } from "@/components/Modal";
 import { PageHeader, SectionTitle } from "@/components/SectionTitle";
 import { LoadingState } from "@/components/states";
@@ -24,13 +25,20 @@ const GOALS = [
   { id: "interview", label: "Job interview", emoji: "🧑‍💼" },
 ];
 
+function formatSeconds(total: number): string {
+  const minutes = Math.floor(total / 60);
+  const seconds = Math.floor(total % 60);
+  return `${minutes}:${String(seconds).padStart(2, "0")}`;
+}
+
 export default function Settings() {
   const me = useQuery(api.progress.me);
   const aiStatus = useQuery(api.ai.status);
   const updateProfile = useMutation(api.progress.updateProfile);
   const resetProgress = useMutation(api.progress.resetProgress);
   const { signOut } = useAuth();
-  const { supported: micSupported } = useSpeechRecognition();
+  const speech = useSpeechRecognition();
+  const micSupported = speech.supported;
   const navigate = useNavigate();
 
   const [displayName, setDisplayName] = useState("");
@@ -98,6 +106,15 @@ export default function Settings() {
   const handleSignOut = async () => {
     await signOut();
     navigate("/");
+  };
+
+  const handleMicToggle = () => {
+    if (speech.listening) {
+      speech.stop();
+      return;
+    }
+    speech.clearError();
+    void speech.start();
   };
 
   return (
@@ -241,6 +258,106 @@ export default function Settings() {
             </p>
           </GlassCard>
         </div>
+
+        <GlassCard tone="strong" className="flex flex-col gap-4 p-5 sm:p-6">
+          <div className="flex flex-wrap items-center gap-2">
+            <Mic className="size-4 text-indigo-500" aria-hidden="true" />
+            <p className="text-sm font-bold text-slate-900">
+              Test your microphone
+            </p>
+            <Chip
+              className={cn(
+                !micSupported
+                  ? "border-amber-500/30 bg-amber-400/20 text-amber-800"
+                  : speech.listening
+                    ? "border-rose-500/30 bg-rose-500/12 text-rose-700"
+                    : "border-emerald-500/30 bg-emerald-500/12 text-emerald-700",
+              )}
+            >
+              {!micSupported
+                ? "Unavailable"
+                : speech.listening
+                  ? "Recording"
+                  : "Ready"}
+            </Chip>
+          </div>
+
+          <p className="max-w-2xl text-sm leading-6 text-slate-600">
+            Tap the microphone and speak normally. This shows exactly what the
+            recogniser hears, live — the same engine used in speaking practice.
+            Nothing is recorded or saved.
+          </p>
+
+          <div className="flex flex-col items-center gap-3">
+            <MicrophoneButton
+              state={
+                !micSupported
+                  ? "disabled"
+                  : speech.listening
+                    ? "listening"
+                    : "idle"
+              }
+              onToggle={handleMicToggle}
+            />
+            <p className="text-xs font-semibold tabular-nums text-slate-500">
+              {formatSeconds(
+                speech.listening ? speech.seconds : speech.totalSeconds,
+              )}{" "}
+              recorded
+            </p>
+          </div>
+
+          <div
+            role="status"
+            aria-live="polite"
+            className={cn(
+              "glass-inset max-h-40 min-h-20 w-full overflow-y-auto rounded-2xl p-4 text-sm leading-6",
+              speech.transcript ? "text-slate-700" : "text-slate-400",
+            )}
+          >
+            {speech.transcript ? (
+              speech.transcript
+            ) : speech.listening ? (
+              <span className="inline-flex items-center gap-2 text-slate-500">
+                <span className="relative flex size-2" aria-hidden="true">
+                  <span className="absolute inline-flex size-full animate-ping rounded-full bg-rose-400/70" />
+                  <span className="relative inline-flex size-2 rounded-full bg-rose-500" />
+                </span>
+                Listening — start speaking to see your words here.
+              </span>
+            ) : (
+              "Your words will appear here as you speak."
+            )}
+          </div>
+
+          {speech.error ? (
+            <div className="flex items-start gap-2 rounded-2xl bg-rose-500/10 p-3 text-xs leading-5 text-rose-700">
+              <AlertTriangle
+                className="mt-0.5 size-3.5 shrink-0 text-rose-500"
+                aria-hidden="true"
+              />
+              <p className="flex-1">{speech.error}</p>
+              <button
+                type="button"
+                onClick={speech.clearError}
+                className="font-semibold underline-offset-2 hover:underline"
+              >
+                Dismiss
+              </button>
+            </div>
+          ) : null}
+
+          {speech.transcript || speech.totalSeconds > 0 ? (
+            <Button
+              type="button"
+              variant="outline"
+              onClick={speech.reset}
+              className="w-fit rounded-full border-white/80 bg-white/70 text-slate-700"
+            >
+              Clear transcript
+            </Button>
+          ) : null}
+        </GlassCard>
       </section>
 
       <section className="flex flex-col gap-3">
