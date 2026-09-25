@@ -39,11 +39,17 @@ export default function QuickQuiz() {
   const [saving, setSaving] = useState(false);
   const [summary, setSummary] = useState<ActivityResultSummary | null>(null);
 
-  useEffect(() => {
-    if (!levelTouched && overview?.profile.englishLevel) {
-      setLevel(overview.profile.englishLevel);
-    }
-  }, [overview, levelTouched]);
+  // Adopt the saved English level until the learner manually picks one.
+  // Adjusting state during render avoids a cascading render inside an effect.
+  const [adoptedLevel, setAdoptedLevel] = useState<EnglishLevel | null>(null);
+  if (
+    !levelTouched &&
+    overview?.profile.englishLevel &&
+    adoptedLevel !== overview.profile.englishLevel
+  ) {
+    setAdoptedLevel(overview.profile.englishLevel);
+    setLevel(overview.profile.englishLevel);
+  }
 
   const locked = selected !== null;
   const question = questions[index];
@@ -92,22 +98,22 @@ export default function QuickQuiz() {
     }
   };
 
+  // Per-question countdown. The remaining time is seeded by `startRound` and
+  // `handleNext`, so the effect only has to run the ticking interval.
   useEffect(() => {
     if (phase !== "playing" || locked || !question) return;
-    setSecondsLeft(SECONDS_PER_QUESTION);
     const timer = window.setInterval(() => {
       setSecondsLeft((value) => (value <= 1 ? 0 : value - 1));
     }, 1000);
     return () => window.clearInterval(timer);
   }, [phase, index, locked, question]);
 
-  useEffect(() => {
-    if (phase !== "playing" || locked || !question) return;
-    if (secondsLeft === 0) {
-      setSelected(-1);
-      setAnsweredTotal((value) => value + 1);
-    }
-  }, [secondsLeft, phase, locked, question]);
+  // Reveal the answer when the countdown reaches zero. Adjusting state during
+  // render keeps this from being a cascading render inside an effect.
+  if (phase === "playing" && !locked && question && secondsLeft === 0) {
+    setSelected(-1);
+    setAnsweredTotal(answeredTotal + 1);
+  }
 
   const handleNext = () => {
     if (index + 1 >= questions.length) {

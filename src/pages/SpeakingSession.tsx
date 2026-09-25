@@ -81,11 +81,17 @@ export default function SpeakingSession() {
 
   const topic = topicById(topicId) ?? SPEAKING_TOPICS[0];
 
-  useEffect(() => {
-    if (!levelTouched && overview?.profile.englishLevel) {
-      setLevel(overview.profile.englishLevel);
-    }
-  }, [overview, levelTouched]);
+  // Adopt the saved English level until the learner manually picks one.
+  // Adjusting state during render avoids a cascading render inside an effect.
+  const [adoptedLevel, setAdoptedLevel] = useState<EnglishLevel | null>(null);
+  if (
+    !levelTouched &&
+    overview?.profile.englishLevel &&
+    adoptedLevel !== overview.profile.englishLevel
+  ) {
+    setAdoptedLevel(overview.profile.englishLevel);
+    setLevel(overview.profile.englishLevel);
+  }
 
   // Mirror the live transcript into the composer so learners can watch their
   // words appear (including while they are still speaking). Adjusting state

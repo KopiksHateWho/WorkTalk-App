@@ -60,11 +60,17 @@ export default function VocabularyGame() {
   const [summary, setSummary] = useState<ActivityResultSummary | null>(null);
   const [answeredTotal, setAnsweredTotal] = useState(0);
 
-  useEffect(() => {
-    if (!levelTouched && overview?.profile.englishLevel) {
-      setLevel(overview.profile.englishLevel);
-    }
-  }, [overview, levelTouched]);
+  // Adopt the saved English level until the learner manually picks one.
+  // Adjusting state during render avoids a cascading render inside an effect.
+  const [adoptedLevel, setAdoptedLevel] = useState<EnglishLevel | null>(null);
+  if (
+    !levelTouched &&
+    overview?.profile.englishLevel &&
+    adoptedLevel !== overview.profile.englishLevel
+  ) {
+    setAdoptedLevel(overview.profile.englishLevel);
+    setLevel(overview.profile.englishLevel);
+  }
 
   const timerSeconds = level === "basic" ? 25 : 18;
   const locked = selected !== null;
@@ -125,30 +131,23 @@ export default function VocabularyGame() {
     }
   };
 
-  // Per-question timer. Running out reveals the answer instead of failing silently.
+  // Per-question countdown. The remaining time is seeded by `startRound` and
+  // `handleNext`, so the effect only has to run the ticking interval.
   useEffect(() => {
     if (phase !== "playing" || locked || !question) return;
-    setSecondsLeft(timerSeconds);
     const timer = window.setInterval(() => {
-      setSecondsLeft((value) => {
-        if (value <= 1) {
-          window.clearInterval(timer);
-          return 0;
-        }
-        return value - 1;
-      });
+      setSecondsLeft((value) => (value <= 1 ? 0 : value - 1));
     }, 1000);
     return () => window.clearInterval(timer);
-  }, [phase, index, locked, question, timerSeconds]);
+  }, [phase, index, locked, question]);
 
-  useEffect(() => {
-    if (phase !== "playing" || locked || !question) return;
-    if (secondsLeft === 0) {
-      setSelected(-1);
-      setAnsweredTotal((value) => value + 1);
-      setLives((value) => Math.max(0, value - 1));
-    }
-  }, [secondsLeft, phase, locked, question]);
+  // Reveal the answer when the countdown reaches zero. Adjusting state during
+  // render keeps this from being a cascading render inside an effect.
+  if (phase === "playing" && !locked && question && secondsLeft === 0) {
+    setSelected(-1);
+    setAnsweredTotal(answeredTotal + 1);
+    setLives(Math.max(0, lives - 1));
+  }
 
   const handleNext = () => {
     const isLastQuestion = index + 1 >= questions.length;
