@@ -13,7 +13,7 @@ import { useSpeechRecognition } from "@/hooks/use-speech-recognition";
 import { cn } from "@/lib/utils";
 import { useMutation, useQuery } from "convex/react";
 import { AlertTriangle, Check, KeyRound, Loader2, Mic, Sparkles, UserPlus } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { toast } from "sonner";
 import type { EnglishLevel } from "@/types/learner";
@@ -48,12 +48,15 @@ export default function Settings() {
   const [resetOpen, setResetOpen] = useState(false);
   const [resetting, setResetting] = useState(false);
 
-  useEffect(() => {
-    if (!me) return;
+  // Seed the form from the loaded profile once per profile version. Adjusting
+  // state during render (instead of inside an effect) avoids a cascading render.
+  const [seededProfile, setSeededProfile] = useState<typeof me>(undefined);
+  if (me && me !== seededProfile) {
+    setSeededProfile(me);
     setDisplayName(me.profile.displayName ?? "");
     setLevel(me.profile.englishLevel ?? "basic");
     setGoals(me.profile.goals);
-  }, [me]);
+  }
 
   if (me === undefined) {
     return <LoadingState message="Loading your settings..." />;
