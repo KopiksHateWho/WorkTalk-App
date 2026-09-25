@@ -87,12 +87,14 @@ export default function SpeakingSession() {
     }
   }, [overview, levelTouched]);
 
-  // Keep the composer in sync with the live transcript.
-  useEffect(() => {
-    if (!speech.listening) {
-      setDraft(speech.transcript);
-    }
-  }, [speech.transcript, speech.listening]);
+  // Mirror the live transcript into the composer so learners can watch their
+  // words appear (including while they are still speaking). Adjusting state
+  // during render avoids a second render pass in an effect.
+  const [lastTranscript, setLastTranscript] = useState(speech.transcript);
+  if (speech.transcript !== lastTranscript) {
+    setLastTranscript(speech.transcript);
+    setDraft(speech.transcript);
+  }
 
   const turns = sessionQuery?.turns ?? [];
   const lastAiTurn = [...turns].reverse().find((turn) => turn.role === "ai");
@@ -571,7 +573,9 @@ export default function SpeakingSession() {
                 </Button>
                 <Button
                   type="button"
-                  disabled={!draft.trim() || sending || conversationFull}
+                  disabled={
+                    !draft.trim() || sending || conversationFull || speech.listening
+                  }
                   onClick={() => void handleSend()}
                   className="gap-2 rounded-full bg-brand text-white"
                 >
